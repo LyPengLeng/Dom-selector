@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 700px x 700px box */
+        .container {
+            width: 700px;
+            height: 700px;
+            border: 2px solid black;
+            position: relative;
+        }
+
+        /* 50px square */
+        .small-box {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+
+            position: absolute;
+            top: 50px;
+            left: 50px;
+
+            box-sizing: border-box;
+        }
+
+        /* Circle control */
+        .control {
+            position: absolute;
+
+            left: 50%;
+            bottom: 70px;
+
+            transform: translateX(-50%);
+
+            width: 180px;
+            height: 180px;
+        }
+
+        /* Circle */
+        #circle {
+            width: 50px;
+            height: 50px;
+
+            border: 2px solid black;
+            border-radius: 50%;
+
+            position: absolute;
+            top: 65px;
+            left: 65px;
+        }
+
+        /* Arrow button */
+        .arrow {
+            position: absolute;
+
+            border: none;
+            background: none;
+
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        .arrow:hover {
+            color: red;
+        }
+
+        /* Up */
+        .up {
+            top: 0;
+            left: 70px;
+        }
+
+        /* Left */
+        .left {
+            top: 65px;
+            left: 0;
+        }
+
+        /* Right */
+        .right {
+            top: 65px;
+            right: 0;
+        }
+
+        /* Down */
+        .down {
+            bottom: 0;
+            left: 70px;
+        }
+
+        /* Button outside the box */
+        .outside-button {
+            margin-top: 20px;
+
+            padding: 10px;
+            font-size: 18px;
+
+            border: 2px solid black;
+            border-radius: 8px;
+
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .outside-button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- 700px x 700px box -->
+        <div class="container">
+
+            <!-- 50px square -->
+            <div class="small-box"></div>
+
+            <!-- Circle and arrows -->
+            <div class="control">
+
+                <button class="arrow up" onclick="moveUp()">▲</button>
+
+                <button class="arrow left" onclick="moveLeft()">‹</button>
+
+                <div id="circle"></div>
+
+                <button class="arrow right" onclick="moveRight()">›</button>
+
+                <button class="arrow down" onclick="moveDown()">▼</button>
+
+            </div>
+
+        </div>
+
+        <!-- Button outside the box -->
+        <button class="outside-button" onclick="resetBox()">
+            Reset
+        </button>
+
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JavaScript -->
+    <script src="exercise.js"></script>
+
+</body>
+
+</html>
+

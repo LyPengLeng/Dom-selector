@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        #image {
+            width: 150px;
+            height: 150px;
+            transition: 0.3s;
+        }
+
+        #image.zoom {
+            width: 175px;
+            height: 175px;
+        }
+
+        #button-area {
+            width: 100%;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="container col-3">
+        <h1 class="text-center my-5">Login account</h1>
+
+        <div class="my-3">
+            <label for="" class="form-label">Email</label>
+            <input type="text" id="email" class="form-control">
+            <p id="m_email" class="text-danger"></p>
+        </div>
+
+        <div class="my-3">
+            <label for="" class="form-label">Password</label>
+            <input type="text" id="password" class="form-control">
+            <p id="m_pass" class="text-danger"></p>
+        </div>
+
+        <div class="my-3">
+            <p id="message" class="text-success text-center"></p>
+        </div>
+
+        <button id="login" class="btn btn-primary mt-5">Login</button>
+    </form>
+    
+
+    <hr>
+
+<div class="mx-auto" style="width: 200px !important;">
+    <img src="assets/images.jpg" alt="Image" width="200">
+    <p>Double click to zoom</p>
+</div>
+
+    <hr>
+    <label for="">Skills</label>
+    <select name="" id="skills">
+        <option value="" disabled selected>Choose skill</option>
+        <option value="web">Web dev</option>
+        <option value="app">App</option>
+        <option value="cyber">Cyber</option>
+        <option value="mmo">MMO</option>
+    </select>
+
+    <div class="d-flex gap-1">
+        <label for="">Your skill selected: </label>
+        <p id="selected"></p>
+    </div>
+
+    <hr>
+    <div class="container d-flex justify-content-center align-items-center"
+        style="width: 100vw; height: 100vh;"
+        >
+        <div id="love" class="card col-4">
+            <h1 class="text-center my-5">Do you love me?</h1>
+
+            <div id="button-area" class="position-relative">
+                <button id="yes-btn" class="btn btn-success position-absolute start-0"
+                style="width: 100px; bottom: 0px;">Yes</button>
+                <button id="no-btn" class="btn btn-danger position-absolute end-0"
+                style="width: 100px; bottom: 0px; height: 40px;">No</button>
+            </div>
+        </div>
+
+        <div id="me-too" class="fs-1">
+            Me too!
+        </div>
+    </div>    
+
+    <script src="mouseover.js"></script>
+    <script src="change.js"></script>
+    <script src="dbclick.js"></script>
+    <script src="click.js"></script>
+</body>
+</html>
